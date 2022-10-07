@@ -6,14 +6,11 @@
 
 #include <stdio.h>
 
-int main()
-{
+int main() {
     int n;
     double sum = 0;
-    if (scanf("%d", &n))
-    {
-        for (int i = 1; i <= n; i++)
-        {
+    if (scanf("%d", &n)) {
+        for (int i = 1; i <= n; i++) {
             sum += (i / (i * 2.0 - 1) * (i % 2 * 2 - 1));
         }
         printf("%.3f", sum);
