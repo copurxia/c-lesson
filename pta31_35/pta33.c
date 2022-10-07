@@ -5,6 +5,31 @@
  */
 
 #include <stdio.h>
+#include <math.h>
+
+int prime(int n) {
+    if (n == 1) {
+        return 0;
+    }
+    int status = 1;
+    for (int i = 2; i <= sqrt(n); i++) {
+        if (n % i == 0) {
+            status = 0;
+            break;
+        }
+    }
+    return status;
+}
 
 int main() {
+    int m, n, sum = 0, count = 0;
+    if (scanf("%d %d", &m, &n)) {
+        for (int i = m; i <= n; i++) {
+            if (prime(i)) {
+                count++;
+                sum += i;
+            }
+        }
+        printf("%d %d", count, sum);
+    }
 }
