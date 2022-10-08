@@ -6,20 +6,20 @@ int main() {
         for (int i = 0; i < num; i++) {
             if (scanf("%d %d", &a, &b)) {
                 int status = 0;
-                int outnum[100];
+                int tempnum = 0;
                 for (int j = a; j <= b; j++) {
                     if (j % 3 == 2 && j % 7 == 1) {
-                        outnum[status] = j;
+                        if (tempnum) {
+                            printf("%d ", tempnum);
+                        }
+                        tempnum = j;
                         status++;
                     }
                 }
                 if (status) {
-                    for (int k = 0; k <= status - 2; k++) {
-                        printf("%d ", outnum[k]);
-                    }
-                    printf("%d\n", outnum[status - 1]);
+                    printf("%d", tempnum);
                 } else {
-                    printf("none\n");
+                    printf("none");
                 }
             }
         }

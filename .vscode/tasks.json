@@ -4,7 +4,7 @@
 		{
 			"type": "cppbuild",
 			"label": "C/C++: gcc.exe 生成活动文件",
-			"command": "D:/MinGW/bin/gcc.exe",
+			"command": "D:/Scoop/apps/winlibs-mingw-llvm-ucrt/current/bin/gcc.exe",
 			"args": [
 				"-fdiagnostics-color=always",
 				"-g",
@@ -13,7 +13,7 @@
 				"${fileDirname}\\${fileBasenameNoExtension}.exe"
 			],
 			"options": {
-				"cwd": "D:/MinGW/bin"
+				"cwd": "D:/Scoop/apps/winlibs-mingw-llvm-ucrt/current/bin"
 			},
 			"problemMatcher": [
 				"$gcc"
@@ -22,7 +22,13 @@
 				"kind": "build",
 				"isDefault": true
 			},
-			"detail": "编译器: D:/MinGW/bin/gcc.exe"
+			"detail": "编译器: D:/Scoop/apps/winlibs-mingw-llvm-ucrt/current/bin/gcc.exe",
+			"presentation": { //执行这个任务时的一些其他设定
+				"echo": true, //表示在执行任务时在终端要有输出
+				"reveal": "always", //执行任务时是否跳转到终端面板，可以为always，silent，never
+				"focus": false, //设为true后可以使执行task时焦点聚集在终端，但对编译来说，设为true没有意义，因为运行的时候才涉及到输入
+				"panel": "shared" //表示任务的输出是共享的，也就是说，如果有多个任务在执行，那么他们的输出会共享一个终端面板
+			},
 		}
 	]
 }
