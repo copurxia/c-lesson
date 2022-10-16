@@ -5,7 +5,7 @@
  */
 #include <stdio.h>
 
-int facto(int n) {
+double facto(double n) {
     if (n == 1 || n == 0) {
         return 1;
     } else {
@@ -14,10 +14,8 @@ int facto(int n) {
 }
 
 int main() {
-    int m, n;
-    if (scanf("%d %d",&m,&n))
-    {
-        /* code */
+    double m, n;
+    if (scanf("%lf %lf", &m, &n)) {
+        printf("result = %.0lf", facto(n) / (facto(m) * facto(n - m)));
     }
-    
 }
