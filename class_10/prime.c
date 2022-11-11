@@ -1,3 +1,7 @@
+/*
+    寻找孪生素数
+*/
+
 #include <stdio.h>
 #include <math.h>
 
@@ -14,13 +18,13 @@ int prime(int n) {
 }
 
 int main() {
-    int m, count = 0;
-    if (scanf("%d", &m)) {
-        for (int i = m - 1; i > 2 && count != 10; i--) {
-            if (prime(i)) {
-                printf("%6d", i);
-                count++;
-            }
+    int n;
+    scanf("%d", &n);
+    while (1) {
+        n++;
+        if (prime(n) && prime(n + 2)) {
+            printf("%d %d", n, n + 2);
+            break;
         }
     }
 }

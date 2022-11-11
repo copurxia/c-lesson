@@ -7,7 +7,7 @@
 #include <stdio.h>
 
 int prime(int n) {
-    if (n == 1) {
+    if (n < 2) {
         return 0;
     }
     for (int i = 2; i <= sqrt(n); i++) {

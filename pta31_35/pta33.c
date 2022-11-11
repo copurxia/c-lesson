@@ -8,7 +8,7 @@
 #include <math.h>
 
 int prime(int n) {
-    if (n == 1) {
+    if (n < 2) {
         return 0;
     }
     for (int i = 2; i <= sqrt(n); i++) {
@@ -18,7 +18,6 @@ int prime(int n) {
     }
     return 1;
 }
-
 int main() {
     int m, n, sum = 0, count = 0;
     if (scanf("%d %d", &m, &n)) {
