@@ -10,7 +10,8 @@
 				"-g",
 				"${file}",
 				"-o",
-				"${fileDirname}\\${fileBasenameNoExtension}.exe"
+				"${fileDirname}\\${fileBasenameNoExtension}.exe",
+				"-fexec-charset=UTF-8"
 			],
 			"options": {
 				"cwd": "D:/Scoop/apps/winlibs-mingw-llvm-ucrt/current/bin"
